@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DjangoGirls Blog</title>
+    </head>
+<body>
+  {% for post in blog_posts %}
+  <ul>
+    <li><a href="{% url 'post_detail' post.id %}" > {{ post.id}} {{ post.name}}</a></li>
+  </ul>
+  {% endfor %}
+
+
+<h1>Django Girls</h1>
+<p>All the posts will come here wait for it!!!</p>
+
+</body>
+</html>
